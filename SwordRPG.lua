@@ -66,7 +66,7 @@ b:Toggle("XPFarm",function(bool)
             while AutoXPFarm == true do wait(0.5)
             GetLocalTools()
             FarmXP(tools)
-            else break
+            if AutoXPFarm == false then break end
         end
     end)
 end)
@@ -76,7 +76,7 @@ f:Toggle("GodMode (Mobs only)",function(bool)
     spawn(function()
             while Defense == true do wait()
             statsremote:FireServer("Defense", "One")
-            else break
+            if Defense == false then break end
         end 
     end)
 end)
@@ -166,7 +166,3 @@ e:Button("Inf Gold", function()
 end)
 
 exit:DestroyGui()
-
-
-
-
